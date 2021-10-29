@@ -16,9 +16,7 @@ interface CartProviderData {
   deleteProduct: (product: Product) => void;
 }
 
-export const CartContext = createContext<CartProviderData>(
-  {} as CartProviderData
-);
+const CartContext = createContext<CartProviderData>({} as CartProviderData);
 
 export const CartProvider = ({ children }: CartProps) => {
   const [cart, setCart] = useState<Product[]>([]);

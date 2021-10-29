@@ -13,10 +13,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-img {
-  width: auto;
-  height: 200px;
-}
 .products {
   display: flex;
   flex-direction: row;
@@ -26,9 +22,21 @@ img {
   margin: 5px 0;
 }
 .products p {
-  width: 250px;
+  width: 225px;
 }
 .products div {
   background-color: #ffffff;
   margin-bottom: 8px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item img {
+  max-width: 100px;
+  height: auto;
+}
+.item button {
+  margin: 8px;
 }

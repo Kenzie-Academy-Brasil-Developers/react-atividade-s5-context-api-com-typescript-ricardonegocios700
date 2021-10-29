@@ -1,8 +1,10 @@
 import "./App.css";
 import List from "./components/List/List";
+import { useCart } from "./Providers/Cart/cart";
 import { useState } from "react";
 
 function App() {
+  const { cart } = useCart();
   const [list, setList] = useState([
     {
       id: 11,
@@ -46,7 +48,13 @@ function App() {
       <h1>Products</h1>
       <div className="products">
         {list.map((item) => (
-          <List item={item} />
+          <List item={item} isCart={false} />
+        ))}
+      </div>
+      <h1>Cart</h1>
+      <div className="products">
+        {cart.map((item) => (
+          <List item={item} isCart={true} />
         ))}
       </div>
     </>
