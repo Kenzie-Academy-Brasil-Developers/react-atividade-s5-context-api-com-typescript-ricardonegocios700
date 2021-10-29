@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function App() {
   const { cart } = useCart();
-  const [list, setList] = useState([
+  const [list] = useState([
     {
       id: 11,
       title: "Samsung Galaxy A01 Dual SIM 32 GB preto 2 GB RAM",
